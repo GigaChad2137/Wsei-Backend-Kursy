@@ -6,6 +6,7 @@ from background.tokensAuthentication import token_required_with_role
 from background.logsconf import logger
 from background.config import BaseConfig
 from appModels.coursesFormsModels import add_course_model
+from coursesFunctions.getDataFunctions import get_courses
 def create_app():
 
     app = Flask(__name__)
@@ -52,7 +53,7 @@ class ListaKursow(Resource):
     def get(current_user):
       
 
-        response = courses_list()
+        response = get_courses()
 
         if response['success'] == True:
 
