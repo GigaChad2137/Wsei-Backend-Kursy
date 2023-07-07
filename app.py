@@ -7,6 +7,7 @@ from background.logsconf import logger
 from background.config import BaseConfig
 from appModels.coursesFormsModels import add_course_model
 from coursesFunctions.getDataFunctions import get_courses
+from coursesFunctions.postDataFunctions import sign_to_course
 def create_app():
 
     app = Flask(__name__)
